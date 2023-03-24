@@ -16,7 +16,7 @@ else
 {
 for (v = 0; v < size; v++)
 {
-for (w = size - 1; w > 1; w--)
+for (w = size - v; w > 1; w--)
 {
 _putchar(32);
 }

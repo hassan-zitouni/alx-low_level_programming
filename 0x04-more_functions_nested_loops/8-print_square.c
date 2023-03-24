@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal -  prints a square
+ * print_square -  prints a square
  *@size: the number of square
  * Return: empty
  */

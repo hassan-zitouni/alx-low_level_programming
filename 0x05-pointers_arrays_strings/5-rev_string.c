@@ -7,26 +7,16 @@
  */
 void rev_string(char *s)
 {
-char *start = s;
-char *px = s;
-char *end = s;
-while (*end != '\0')
+char rev = s[0];
+int p = 0;
+int i;
+while (s[p] != '\0')
+p++;
+for (i = 0; i < p; i++)
 {
-end++;
+p--;
+rev = s[i];
+s[i] = s[p];
+s[p] = rev;
 }
-end--;
-while (start < end)
-{
-char temp = *start;
-*start = *end;
-*end = temp;
-start++;
-end--;
-}
-while (*px != '\0')
-{
-putchar(*px);
-px++;
-}
-putchar('\n');
 }

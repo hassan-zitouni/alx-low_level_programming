@@ -9,22 +9,13 @@
 void print_array(int *a, int n)
 {
 int i;
-int num = 0;
-int digit = 0;
-for (i = 0; i < n; i++)
+for (i = 0; i < (n - 1); i++)
 {
-num = a[i];
-while (num > 0)
+printf("%d, ", a[i]);
+}
+if (i == (n-1))
 {
-digit = num % 10;
-putchar('0' + digit);
-num /= 10;
+printf("%d", a[i-1]);
 }
-if (i < n - 1)
-{
-putchar(',');
-putchar(' ');
-}
-}
-putchar('\n');
+printf("\n");
 }

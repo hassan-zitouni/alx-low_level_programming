@@ -23,5 +23,5 @@ if (sqrt > n)
 return (-1);
 if (sqrt == n)
 return (start);
-return (_sqrt_helper(n, start + 1);
+return (_sqrt_helper(n, start + 1));
 }

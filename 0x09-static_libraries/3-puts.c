@@ -1,0 +1,15 @@
+#include "main.h"
+/**
+ * _puts - writes the string s to stdout
+ * @s: The string to print
+ */
+void _puts(char *s)
+{
+int i = 0;
+while (s[i] != '\0')
+{
+_putchar(s[i]);
+i++;
+}
+_putchar('\n');
+}

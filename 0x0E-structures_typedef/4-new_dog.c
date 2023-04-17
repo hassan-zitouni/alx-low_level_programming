@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-
+#include "dog.h"
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+dog_t *new_dog(char *name, float age, char *owner);
 /**
  * _strlen - returns the length of a string
  * @s: The string to check
@@ -12,7 +14,7 @@
 int _strlen(char *s)
 {
 int i = 0;
-while (s[i] != '\0')
+while (*s++)
 i++;
 return (i);
 }
@@ -49,14 +51,14 @@ if (new_dog == NULL)
 {
 return (NULL);
 }
-new_dog->name = malloc(_strlen(name) + 1);
+new_dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
 if (new_dog->name == NULL)
 {
 free(new_dog);
 return (NULL);
 }
 _strcpy(new_dog->name, name);
-new_dog->owner = malloc(_strlen(owner) + 1);
+new_dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 if (new_dog->owner == NULL)
 {
 free(new_dog->name);

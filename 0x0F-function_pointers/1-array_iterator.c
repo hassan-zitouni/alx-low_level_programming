@@ -3,7 +3,6 @@
 
 /**
  * array_iterator - Write a function that executes a function
- * use at most n bytes from src
  * @array: input value
  * @size: input value
  * @action: input value
@@ -11,7 +10,10 @@
  **/
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-for (size_t i = 0; i < size; i++)
+unsigned int i;
+if (array == NULL || action == NULL)
+return;
+for (i = 0; i < size; i++)
 {
 action(array[i]);
 }

@@ -2,7 +2,11 @@
 #define _3_CALC_H_
 
 #include <stdlib.h>
-
+/**
+ * struct op - struct op
+ * @op: input value
+ * @f: input value
+ **/
 typedef struct op
 {
 char *op;

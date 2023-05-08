@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 
-void error_file(int file_from, int file_to, char *argv[];
 
 /**
  * error_file - this function to check the file.
